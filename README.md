@@ -6,4 +6,4 @@ MAPANI Code Div is my main initiative to bring thinkers, activists and professio
 @Alxmasters
 
 
-find us in [instagram] (https://www.instagram.com/mapanivzla/ "instagram page")
+find us in [instagram](https://www.instagram.com/mapanivzla/)
