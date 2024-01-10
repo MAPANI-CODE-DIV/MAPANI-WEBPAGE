@@ -3736,6 +3736,7 @@ input[type="button"].btn-block {
   margin-left: 0;
 }
 
+
 .dropleft .dropdown-toggle::before {
   vertical-align: 0;
 }
@@ -10514,8 +10515,9 @@ h5,
   padding-bottom: .9rem;
   padding-left: 20px;
   padding-right: 20px;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
   font-weight: 700;
+  text-shadow: 0.5px 0px 2px #00000052;
   opacity: 1 !important;
 }
 
@@ -10708,7 +10710,7 @@ h5,
 .ftco-navbar-light.scrolled .nav-link {
   padding-top: 0.9rem !important;
   padding-bottom: 0.9rem !important;
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: white !important;
 }
 
 .ftco-navbar-light.scrolled .nav-link:hover {
@@ -10787,9 +10789,10 @@ h5,
 
 .slider-text h1 {
   font-size: 60px;
-  color: #fff;
+  color: white;
   line-height: 1.2;
-  font-weight: 400;
+  font-weight: 500;
+  
 }
 
 @media (max-width: 991.98px) {

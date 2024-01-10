@@ -1,17 +1,20 @@
-{% include 'site/header.html' %}
+{% extends 'site/base.html' %}
+{% block title%} Inicio {% endblock %}
+{% block body %}
 <main>
-        <div class="hero-wrap" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+        <div class="hero-wrap" style="background-image: url('images/blog4.jpg');" data-stellar-background-ratio="0.5">
                 <div class="overlay"></div>
                 <div class="container">
                         <div class="row no-gutters slider-text align-items-center justify-content-center"
                                 data-scrollax-parent="true">
-                                <div class="col-md-7 ftco-animate text-center"
+                                <div class="col-md-12 ftco-animate text-left"
                                         data-scrollax=" properties: { translateY: '70%' }">
                                         <p class="breadcrumbs"
                                                 data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span
-                                                        class="mr-2"><a href="index.html">Inicio</a></span><span>Blog</span></p>
+                                                        class="mr-2"><a
+                                                                href="/">Inicio</a></span></p>
                                         <h1 class="mb-3 bread"
-                                                data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Blog
+                                                data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">>Blog
                                         </h1>
                                 </div>
                         </div>
@@ -160,5 +163,4 @@
                         </div>
                 </div>
         </section>
-
-        {% include 'site/footer.html' %}
+        {% endblock %}
