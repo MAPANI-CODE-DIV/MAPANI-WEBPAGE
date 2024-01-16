@@ -61,4 +61,4 @@ def js_link(jsfile):
     return send_from_directory(os.path.join("templates/site/js"), jsfile)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='localhost', debug=True)

@@ -68,12 +68,13 @@ nav,
 section {
   display: block;
 }
+
 @font-face {
   font-family: "Montserrat";
   src:
-    
+
     url("/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype"),
-  
+
 }
 
 body {
@@ -410,7 +411,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: 2rem;
+  font-size: 4vw;
 }
 
 h3,
@@ -3628,12 +3629,13 @@ input[type="button"].btn-block {
   color: #195da0;
   text-align: left;
   list-style: none;
-  background-color:rgba(0, 0, 0, 0) ;
+  background-color: rgba(0, 0, 0, 0);
   background-clip: padding-box;
   border: 10px solid rgba(0, 0, 0, 0.15);
   border-radius: 0%;
-  
+
 }
+
 @media (max-width: 991.98px) {
   .dropdown-menu {
     font-size: 1rem;
@@ -3780,7 +3782,7 @@ input[type="button"].btn-block {
 .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #78d5ef;
+  background-color: #fff;
 }
 
 .dropdown-item.disabled,
@@ -10418,7 +10420,7 @@ a.text-dark:focus {
   .table {
     border-collapse: collapse !important;
   }
-  
+
   .table td,
   .table th {
     background-color: #fff !important;
@@ -10473,7 +10475,7 @@ h5,
 .h4,
 .h5 {
   line-height: 1.4;
-  color: #000;
+  color: whitesmoke;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 650 !important;
 }
@@ -10542,7 +10544,7 @@ h5,
 .ftco-navbar-light .navbar-nav>.nav-item .dropdown-menu {
   border: none;
   background: rgba(0, 0, 0, 0);
-  
+
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item.ftco-seperator {
@@ -10631,24 +10633,25 @@ h5,
   margin-top: -130px;
   background: #191919 !important;
 
-  
+
 }
 
 .ftco-navbar-light.scrolled .dropdown-item {
-  background-color:#191919;
- 
+  background-color: #191919;
+
 
 }
+
 .ftco-navbar-light.scrolled .dropdown-item:hover {
-  background-color:#191919;
-  color:#6EB532;
+  background-color: #191919;
+  color: #6EB532;
 
 }
 
 .ftco-navbar-light.scrolled .navbar-nav>.nav-item .dropdown-menu {
   border: none;
-  background:#191919;
- 
+  background: #191919;
+
 }
 
 .ftco-navbar-light.scrolled .nav-item.active>a {
@@ -10788,21 +10791,123 @@ h5,
 }
 
 .slider-text h1 {
-  font-size: 60px;
+  font-size: 6em;
   color: white;
   line-height: 1.2;
-  font-weight: 500;
+  font-weight: 800 !important;
+  opacity: 0.7;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+
   
+}
+
+
+.gradient {
+  opacity: 0.7 !important;
+  background: linear-gradient(to right, black, #4caf50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blockquotemark {
+  background: rgba(0,0,0,0);;
+  border-left: 8px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+.blockquotemark p {
+  display: inline-block;
+}
+.glowing a, span{
+  color: green;
+  
+}
+.glowing a::before {
+  content: attr(data-text);
+  position: absolute;
+  color: #6EB532;
+  width: 0;
+  overflow: hidden;
+  transition: 1s;
+    -webkit-text-stroke: 1px #6EB532;
+}
+.glowing a:hover::before {
+  width: 100%;
+  
+}
+.roller {
+  height: 4.125rem;
+  line-height: 4rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  color: #1D3557;
+
+}
+
+.inline {
+  display: inline-block;
+}
+
+.roller #rolltext {
+  position: absolute;
+  top: 0;
+  animation: slidey1 12s 1 6s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.163, 0.90);
+
+}
+
+@keyframes slidey1 {
+  0% {
+    top: 0;
+  }
+
+  25% {
+    top: -4rem;
+  }
+
+  50% {
+    top: -8rem;
+  }
+
+  72.5% {
+    top: -12.25rem;
+  }
+  
+}
+
+@keyframes slideColor {
+  0% {
+    background-color: #387780;
+  }
+
+  33% {
+    background-color: #3f88c5;
+  }
+
+  66% {
+    background-color: #588b8b;
+  }
+
+  100% {
+    background-color: #387780;
+  }
 }
 
 @media (max-width: 991.98px) {
   .slider-text h1 {
-    font-size: 40px;
+    font-size: 8rem;
   }
 }
+
 .logo-weight {
   font-weight: 900 !important;
 }
+
 .slider-text p {
   font-size: 20px;
   line-height: 1.5;
@@ -12929,11 +13034,13 @@ textarea.form-control {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-.nav-item-adjust  {
+
+.nav-item-adjust {
   padding: 0rem !important;
-  box-shadow:none !important;
-  -webkit-box-shadow:none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
 }
+
 .sidebar-wrap {
   padding: 20px;
   border: 1px solid #e6e6e6;
@@ -13116,7 +13223,7 @@ textarea.form-control {
   -webkit-transition: opacity .4s ease-out, visibility 0s linear 0s;
   -o-transition: opacity .4s ease-out, visibility 0s linear 0s;
   transition: opacity .4s ease-out, visibility 0s linear 0s;
-  visibility:inherit;
+  visibility: visible;
   opacity: 1;
 }
 
