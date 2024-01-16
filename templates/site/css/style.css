@@ -3764,7 +3764,7 @@ input[type="button"].btn-block {
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 700;
-  color: white;
+  color: #f6f4f5;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
@@ -10517,7 +10517,7 @@ h5,
   padding-bottom: .9rem;
   padding-left: 20px;
   padding-right: 20px;
-  color: white;
+  color: #f6f4f5;
   font-weight: 700;
   text-shadow: 0.5px 0px 2px #00000052;
   opacity: 1 !important;
@@ -10792,10 +10792,10 @@ h5,
 
 .slider-text h1 {
   font-size: 6em;
-  color: white;
+  color: #f6f4f5;
   line-height: 1.2;
   font-weight: 800 !important;
-  opacity: 0.7;
+  opacity: 1;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 
@@ -10819,8 +10819,42 @@ h5,
 .blockquotemark p {
   display: inline-block;
 }
-.glowing a, span{
-  color: green;
+span[id="world"] {
+  color: var(--blue);
+  font-size: 11rem;
+  
+}
+span[id="children"] {
+    font-size: 8rem;
+    opacity: 1 !important;
+  
+}
+@media (max-width: 991.98px) {
+  span[id="world"] {
+    color: var(--blue);
+    font-size: 9rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .slider-text h1 {
+    font-size: 4rem;
+  }
+}
+#subtitle{
+  font-size: 2.5em;
+  opacity: 1 !important;
+  text-shadow: 0.5px 0px 1px #00000052;
+
+}
+@media (max-width: 991.98px) {
+  #subtitle {
+    font-size: 1.6em;
+    opacity: 1 !important;
+  }
+}
+span {
+  color: #6EB532;
+  
   
 }
 .glowing a::before {
@@ -10898,11 +10932,7 @@ h5,
   }
 }
 
-@media (max-width: 991.98px) {
-  .slider-text h1 {
-    font-size: 8rem;
-  }
-}
+
 
 .logo-weight {
   font-weight: 900 !important;
