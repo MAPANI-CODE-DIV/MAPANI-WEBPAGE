@@ -73,13 +73,31 @@ section {
   font-family: "Montserrat";
   src:
 
-    url("/Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype"),
+    url("/typefonts/Montserrat-VariableFont_wght.ttf") format("truetype"),
+
+}
+
+@font-face {
+  font-family: "Droid";
+  src:
+
+    url("/typefonts/droid.otf") format("opentype"),
+    url("/typefonts/droid.ttf") format('truetype'),
+
+
+}
+
+@font-face {
+  font-family: "Oswald";
+  src:
+
+    url("/typefonts/Oswald-VariableFont_wght.ttf") format("truetype"),
 
 }
 
 body {
   margin: 0;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Oswald", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -10433,7 +10451,7 @@ a.text-dark:focus {
 }
 
 body {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: Oswald, "Montserrat", Arial, sans-serif;
   background: #fff;
   font-size: 16px;
   line-height: 1.8;
@@ -10475,8 +10493,8 @@ h5,
 .h4,
 .h5 {
   line-height: 1.4;
-  color: whitesmoke;
-  font-family: "Montserrat", Arial, sans-serif;
+  color: #363732;
+  font-family: "Oswald", "Montserrat", Arial, sans-serif;
   font-weight: 650 !important;
 }
 
@@ -10512,7 +10530,7 @@ h5,
 }
 
 .ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
-  font-size: 16px;
+  font-size: 1em;
   padding-top: .9rem;
   padding-bottom: .9rem;
   padding-left: 20px;
@@ -10713,7 +10731,7 @@ h5,
 .ftco-navbar-light.scrolled .nav-link {
   padding-top: 0.9rem !important;
   padding-bottom: 0.9rem !important;
-  color: white !important;
+  color: #f6f4f5 !important;
 }
 
 .ftco-navbar-light.scrolled .nav-link:hover {
@@ -10794,14 +10812,75 @@ h5,
   font-size: 6em;
   color: #f6f4f5;
   line-height: 1.2;
-  font-weight: 800 !important;
+  font-weight: 800;
   opacity: 1;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
-
-  
 }
 
+.indexheadline {
+  font-size: 3.5em !important;
+  color: #f6f4f5;
+  line-height: 1.2;
+  font-weight: 800 !important;
+  opacity: 1;
+
+  padding-left: 15px;
+}
+
+.indexsubheadline {
+  color: #363732;
+  font-weight: 700 !important;
+  opacity: 1;
+
+  background-color: #6EB532;
+  padding-left: 15px;
+}
+
+.blockshadow {
+  background-color: rgba(0, 0, 0, 0.06);
+  border-radius: 2px;
+}
+
+.youtubename {
+  color: black;
+  font-weight: 500;
+}
+
+.youtubename,
+a:hover {
+  color: black;
+}
+
+.quoteicon {
+  font-size: 6em;
+
+}
+
+.quoteauth {
+  font-size: 1.5em !important;
+  color: #f6f4f5;
+  font-weight: 800 !important;
+  text-shadow: 0.5px 0px 1px #00000052;
+}
+
+.hashtag {
+  font-size: 1.1em !important;
+  color: #6EB532 !important;
+  font-weight: 500;
+}
+
+@media (max-width: 430px) {
+  .hashtag {
+    font-size: 0.6em !important;
+    color: #6EB532 !important;
+    font-weight: 500;
+  }
+}
+
+.navbarlogo {
+  transform: translate(0%, -2%);
+}
 
 .gradient {
   opacity: 0.7 !important;
@@ -10811,52 +10890,62 @@ h5,
 }
 
 .blockquotemark {
-  background: rgba(0,0,0,0);;
-  border-left: 8px solid #ccc;
+  background: rgba(0, 0, 0, 0);
+  ;
+  border-left: 1px solid #FF7E47;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
 }
+
 .blockquotemark p {
   display: inline-block;
 }
+
 span[id="world"] {
   color: var(--blue);
   font-size: 11rem;
-  
+
 }
+
 span[id="children"] {
-    font-size: 8rem;
-    opacity: 1 !important;
-  
+  font-size: 8rem;
+  opacity: 1 !important;
+
 }
+
 @media (max-width: 991.98px) {
   span[id="world"] {
     color: var(--blue);
     font-size: 9rem;
   }
 }
+
 @media (max-width: 991.98px) {
   .slider-text h1 {
     font-size: 4rem;
   }
 }
-#subtitle{
+
+#subtitle {
   font-size: 2.5em;
   opacity: 1 !important;
   text-shadow: 0.5px 0px 1px #00000052;
 
 }
+
 @media (max-width: 991.98px) {
   #subtitle {
     font-size: 1.6em;
     opacity: 1 !important;
   }
 }
+
 span {
   color: #6EB532;
-  
-  
+
+
 }
+
 .glowing a::before {
   content: attr(data-text);
   position: absolute;
@@ -10864,12 +10953,14 @@ span {
   width: 0;
   overflow: hidden;
   transition: 1s;
-    -webkit-text-stroke: 1px #6EB532;
+  -webkit-text-stroke: 1px #6EB532;
 }
+
 .glowing a:hover::before {
   width: 100%;
-  
+
 }
+
 .roller {
   height: 4.125rem;
   line-height: 4rem;
@@ -10911,7 +11002,7 @@ span {
   72.5% {
     top: -12.25rem;
   }
-  
+
 }
 
 @keyframes slideColor {
@@ -10942,7 +11033,7 @@ span {
   font-size: 20px;
   line-height: 1.5;
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.8);
+  color: #363732;
 }
 
 .slider-text p a {
@@ -11111,8 +11202,7 @@ span {
   -moz-border-radius: 0px;
   -ms-border-radius: 0px;
   border-radius: 0px;
-  -webkit-box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.5);
+
 }
 
 .btn:hover,
@@ -11172,7 +11262,7 @@ span {
 .btn.btn-white {
   background: #fff;
   border: 1px solid #fff;
-  color: #000;
+  color: #363732;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
@@ -11235,30 +11325,30 @@ span {
   display: block;
   width: 100%;
   padding: 30px;
-  color: rgba(0, 0, 0, 0.7);
+  color: #363732;
 }
 
 .ftco-intro .block-18.color-1 {
-  background: #f86f2d;
+  background: #6EB532;
 }
 
 .ftco-intro .block-18.color-2 {
-  background: #fa8f3d;
+  background: #A9DC7F;
 }
 
 .ftco-intro .block-18.color-3 {
-  background: #faaa3a;
+  background: #C9E9AF;
 }
 
 .ftco-intro .block-18 .text strong {
   font-size: 60px;
-  color: #000;
+  color: #363732;
   font-weight: 550;
 }
 
 .ftco-intro .block-18 .text span {
   display: block;
-  color: #000;
+  color: #363732;
   font-size: 24px;
 }
 
@@ -12377,16 +12467,9 @@ textarea.form-control {
 }
 
 .blog-entry {
-  border: 1px solid #f2f2f2;
+  border: 1px solid #0000001a;
   background: #fff;
   overflow: hidden;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0px 3px 66px -24px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0px 3px 66px -24px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 3px 66px -24px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 768px) {
