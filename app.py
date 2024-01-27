@@ -1,10 +1,12 @@
 import os
-from flask import Flask, send_from_directory
-from flask import render_template
+from flask import Flask, send_from_directory, render_template, redirect
+from config import config
+from modules.callData import blogData
+
 
 app = Flask(__name__)
 
-
+#Site Routes
 @app.route("/")
 def home():
     return render_template("site/index.html")
@@ -19,12 +21,7 @@ def about():
 def blog():
     return render_template("site/blog.html")
 
-
-@app.route("/youtube")
-def youtube():
-    return render_template("site/youtube.html")
-
-
+#Site Files Access
 @app.route("/css/<cssfile>")
 def css_link(cssfile):
     return send_from_directory(os.path.join("templates/site/css"), cssfile)
@@ -35,46 +32,9 @@ def image_link(imagefile):
     return send_from_directory(os.path.join("templates/site/images"), imagefile)
 
 
-@app.route("/icomoon/<icomoonfile>")
-def icomoon_link(icomoonfile):
-    return send_from_directory(
-        os.path.join("templates/site/fonts/icomoon"), icomoonfile
-    )
-
-
-@app.route("/flaticon/<flaticonfile>")
-def flaticon_link(flaticonfile):
-    return send_from_directory(
-        os.path.join("templates/site/fonts/flaticon"), flaticonfile
-    )
-
-
-@app.route("/ionicons/<ioniconsfile>")
-def ionicons_link(ioniconsfile):
-    return send_from_directory(
-        os.path.join("templates/site/fonts/ionicons"), ioniconsfile
-    )
-
-
-@app.route("/iconic/<iconicfile>")
-def iconic_link(iconicfile):
-    return send_from_directory(
-        os.path.join("templates/site/fonts/open-iconic"), iconicfile
-    )
-
-
-@app.route("/typefonts/<typefontfile>")
-def typefont_link(typefontfile):
-    return send_from_directory(
-        os.path.join("templates/site/fonts/typefonts"), typefontfile
-    )
-
-
-@app.route("/webfonts/<webfontsfile>")
-def webfonts_link(webfontsfile):
-    return send_from_directory(
-        os.path.join("templates/site/fonts/webfonts"), webfontsfile
-    )
+@app.route("/<path:path>/<fontfile>")
+def font_link(path, fontfile):
+    return send_from_directory(os.path.join("templates/site/fonts", path), fontfile)
 
 
 @app.route("/scss/<scssfile>")
@@ -86,6 +46,50 @@ def scss_link(scssfile):
 def js_link(jsfile):
     return send_from_directory(os.path.join("templates/site/js"), jsfile)
 
+#Admin Routes
+@app.route("/admin/")
+def admin():
+    return render_template("admin/base.html")
+
+
+@app.route("/admin/blog")
+def admin_blog():
+    return render_template("admin/blog.html")
+
+
+@app.route("/admin/blog/save", methods=["POST"])
+def admin_blog_save():
+    blogData()
+    return redirect("/admin/blog")
+
+
+@app.route("/admin/index")
+def admin_index():
+    return render_template("admin/starter.html")
+
+#Admin Files Access
+@app.route("/admin/dist/js/<adminjsfile>")
+def adminjs_link(adminjsfile):
+    return send_from_directory(os.path.join("templates/admin/dist/js"), adminjsfile)
+
+
+@app.route("/admin/dist/css/<admincssfile>")
+def admincss_link(admincssfile):
+    return send_from_directory(os.path.join("templates/admin/dist/css"), admincssfile)
+
+
+@app.route("/admin/dist/img/<adminimgfile>")
+def adminimg_link(adminimgfile):
+    return send_from_directory(os.path.join("templates/admin/dist/img"), adminimgfile)
+
+
+@app.route("/admin/plugins/<path:path>/<adminpluginfile>")
+def adminplugin_link(path, adminpluginfile):
+    return send_from_directory(
+        os.path.join("templates/admin/plugins", path), adminpluginfile
+    )
+
 
 if __name__ == "__main__":
-    app.run(host="192.168.68.115", debug=True)
+    app.config.from_object(config["development"])
+    app.run()
