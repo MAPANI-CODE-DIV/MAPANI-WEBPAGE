@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+   <link href="{{ url_for('site_blueprint.font_link', fontfile='Oswald-VariableFont_wght.ttf', path='typefonts/') }}"
+      rel="stylesheet">
+   <link rel="stylesheet" href="{{ url_for('site_blueprint.css_link', cssfile='all.min.css') }}">
+   <link rel="stylesheet" href="dist/css/loginstyles.css">
+   <title>Login</title>
+</head>
+
+<body>
+
+   <div class="login">
+      <img src="dist/img/DSC_0422.JPG" alt="login image" class="login__img">
+      <form action="/admin/login" method="post" class="login__form">
+         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+         <h1 class="login__title"><img src="images/logo/logo.png"></h1>
+         <div class="login__header"> {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <p>{{message | safe }}</p>
+            {% endfor %}
+            {% else %}
+            <p>Ingrese sus datos<br><br></p>
+            {% endif %}
+            {% endwith %}
+         </div>
+         <div class="login__content">
+            <div class="login__box">
+               <i class="ri-user-3-line login__icon"></i>
+
+               <div class="login__box-input">
+                  <input type="email" required class="login__input" id="email" name="email" autocomplete="off" placeholder=" ">
+                  <label for="email" class="login__label">Email</label>
+               </div>
+            </div>
+
+            <div class="login__box">
+               <i class="ri-lock-2-line login__icon"></i>
+
+
+               <div class="login__box-input">
+                  <input type="password" required class="login__input" id="password" name="password" autocomplete="off" placeholder=" ">
+                  <label for="password" class="login__label">Contraseña</label>
+                  <i class="ri-eye-off-line login__eye" id="login-eye"></i>
+               </div>
+            </div>
+         </div>
+
+         <button type="submit" class="login__button">Iniciar Sesión</button>
+
+         <div class="login__check">
+            <div class="login__check-group">
+            <a href="#" class="login__forgot">Olvidé mi contraseña</a>
+         </div>
+
+         <p class="login__register">
+            Si no tiene un usuario activo o <br>tiene algún problema con su cuenta <br> comuníquese con el administrador
+         </p>
+
+         <div class="block-27">
+            <ul>
+               <li><a href="/" class="fa-duotone fa-arrow-left-from-line"></a></li>
+            </ul>
+      </form>
+      <p>Regresar</p>
+   </div>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="dist/js/loginmain.js"></script>
+</body>
+
+</html>

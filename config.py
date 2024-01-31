@@ -1,13 +1,16 @@
+from decouple import config
+
+
 class Config:
-    SECRET_KEY = 'AHA'
+    SECRET_KEY = config("SECRET_KEY")
+
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    MYSQL_DATABASE_USER = 'root'
-    MYSQL_DATABASE_PASSWORD = ''
-    MYSQL_DATABASE_DB = 'web'
-    MYSQL_DATABASE_HOST = 'localhost'
 
-  
 
-config = {"development": DevelopmentConfig}
+class ProductionConfig(Config):
+    DEBUG = False
+
+
+config = {"development": DevelopmentConfig, "production": ProductionConfig}
