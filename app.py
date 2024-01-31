@@ -87,7 +87,6 @@ def js_link(jsfile):
 def admin():
     return render_template("admin/base.html")
 
-
 @app.route("/admin/blog")
 def admin_blog():
     return render_template("admin/blog.html")
@@ -105,10 +104,9 @@ def admin_blog_save():
         datetime.now(),
         datetime.now(),
     )
-        
-    ModelBlog.create_blog_post(db, data)
-
-    return render_template("admin/blog.html")
+    
+    ModelBlog.create_blog_post(db,data)
+    return redirect(url_for('admin_blog'))
 
 
 @app.route("/protected")
@@ -119,7 +117,6 @@ def protected():
 
 @app.route("/admin/login", methods=["GET", "POST"])
 def admin_login_save():
-    print(db)
 
     if request.method == "POST":
         user = User(
@@ -178,4 +175,4 @@ if __name__ == "__main__":
     app.config.from_object(config["development"])
     csrf.init_app(app)
     db.init_app(app)
-    app.run()
+    app.run(port='7000')

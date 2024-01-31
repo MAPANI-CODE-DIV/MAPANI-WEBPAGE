@@ -7,5 +7,3 @@ class Blog():
         self.username = username
         self.date_of_creation = date_of_creation
         self.last_modification = last_modification
-
-        return
