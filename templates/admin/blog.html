@@ -48,6 +48,7 @@
                         </div>
                         <div class="card-body">
                             <form action="/admin/blog/save" method="post" id="inputForm" enctype="multipart/form-data">
+                              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                                 <div class="mb-3">
                                     <label for="txtTitle" class="form-label">Título del Post</label>
                                     <input type="text" class="form-control" name="txtTitle" id="txtTitle"
