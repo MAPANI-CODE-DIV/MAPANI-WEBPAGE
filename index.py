@@ -12,4 +12,4 @@ csrf = CSRFProtect()
 if __name__ == "__main__":
     login_manager.init_app(app)
     csrf.init_app(app)
-    app.run( host="192.168.68.115", port="7000")
+    app.run(  port="7000")

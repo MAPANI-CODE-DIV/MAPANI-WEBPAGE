@@ -10812,7 +10812,7 @@ h5,
 }
 
 .slider-text h1 {
-  font-size: 6em;
+  font-size: 3rem;
   color: #f6f4f5;
   line-height: 1.2;
   font-weight: 800;
@@ -15553,7 +15553,7 @@ span[id="children"] {
 
 @media (max-width: 991.98px) {
   .slider-text h1 {
-    font-size: 4rem;
+    font-size: 2.5 rem;
   }
 }
 
@@ -16069,7 +16069,7 @@ span {
   bottom: 0;
   content: '';
   opacity: .9;
-  background: #f86f2d;
+  background: #6EB532;
 }
 
 .ftco-section-3 .img {
@@ -16806,7 +16806,7 @@ textarea.form-control {
 }
 
 .ftco-footer .ftco-footer-widget ul li a span {
-  color: #fff;
+  color: #6EB532;
 }
 
 .ftco-footer .ftco-footer-widget .btn-primary {
@@ -17197,7 +17197,7 @@ textarea.form-control {
   width: 40px;
   font-size: 18px;
   padding-top: 2px;
-  color: white;
+  color: #6EB532;
 }
 
 .block-6 {
